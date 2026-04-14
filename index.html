@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Izidigitale — Agence Web Premium | Sites, SEO & E-commerce</title>
+  <meta name="description"
+    content="Izidigitale crée votre site web professionnel, avec un vrai expert dédié. Design premium, SEO optimisé, livraison rapide. Demandez votre devis gratuit.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================= -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+      <a href="/" class="logo" aria-label="Izidigitale – Accueil">
+        <div class="logo-mark">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <rect width="22" height="22" rx="6" fill="url(#lg)" />
+            <path d="M7 11h8M11 7v8" stroke="#000" stroke-width="2.2" stroke-linecap="round" />
+            <defs>
+              <linearGradient id="lg" x1="0" y1="0" x2="22" y2="22">
+                <stop stop-color="#a855f7" />
+                <stop offset="1" stop-color="#7c3aed" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span>Izidigitale</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="/" class="active">Accueil</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#tarifs">Tarifs</a></li>
+        <li><a href="#processus">Processus</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <a href="#contact-form" class="nav-cta">
+        Parler à un expert &nbsp;<span aria-hidden="true">›</span>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO — Synexis Inspired: Centered, Star Visual, Rings
+  ============================================================= -->
+  <section class="hero hero-centered">
+
+    <!-- Animated concentric rings -->
+    <div class="hero-rings" aria-hidden="true">
+      <div class="ring ring-1"></div>
+      <div class="ring ring-2"></div>
+      <div class="ring ring-3"></div>
+      <div class="ring ring-4"></div>
+    </div>
+
+    <!-- Glowing star / diamond shape -->
+    <div class="hero-star-wrap" aria-hidden="true">
+      <svg class="hero-star" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="growthGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#b06cff" />
+            <stop offset="100%" stop-color="#c084fc" />
+          </linearGradient>
+          <filter id="chartGlow">
+            <feGaussianBlur stdDeviation="8" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <!-- Background tech grid for the "chart" -->
+        <rect x="50" y="50" width="200" height="200" rx="12" fill="rgba(120,60,255,0.03)" stroke="rgba(120,60,255,0.1)" stroke-width="1" />
+        <path d="M70 230 L230 230 M70 50 L70 230" stroke="rgba(120,60,255,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
+        
+        <!-- The rising line -->
+        <path
+          d="M70 210 Q90 200 110 180 T150 140 T190 110 T230 70"
+          stroke="url(#growthGrad)"
+          stroke-width="5"
+          stroke-linecap="round"
+          filter="url(#chartGlow)"
+          style="animation: draw-line 3s ease-out forwards;"
+        />
+        <!-- Floating data/star points -->
+        <circle cx="110" cy="180" r="4" fill="#fff" filter="url(#chartGlow)" />
+        <circle cx="150" cy="140" r="4" fill="#fff" filter="url(#chartGlow)" />
+        <circle cx="230" cy="70" r="6" fill="#fff" filter="url(#chartGlow)" />
+        
+        <!-- Pulsing 4-pointed accent at end of growth -->
+        <path
+          d="M230 40 C230 40 235 65 260 70 C235 75 230 100 230 100 C230 100 225 75 200 70 C225 65 230 40 230 40Z"
+          fill="#fff"
+          opacity="0.6"
+          filter="url(#chartGlow)"
+          style="animation: star-float 4s ease-in-out infinite;"
+        />
+      </svg>
+      <!-- Horizontal cyan streaks -->
+      <div class="hero-streak hero-streak-left"></div>
+      <div class="hero-streak hero-streak-right"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="hero-center-content reveal">
+      <div class="hero-overline">Livraison 48h · Satisfait ou remboursé</div>
+
+      <h1 class="hero-title-centered">
+        Propulsez votre business<br>
+        <span class="gradient-text-hero">dans l’ère digitale.</span>
+      </h1>
+
+      <p class="hero-subtitle-centered">
+        Nous créons des solutions web sur mesure et performantes pour transformer vos visiteurs en clients.
+      </p>
+
+      <div class="hero-cta-centered">
+        <a href="#contact-form" class="btn-hero-primary" id="hero-cta-main">
+          Démarrer mon projet
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#tarifs" class="btn-hero-ghost">Voir les offres</a>
+      </div>
+    </div>
+
+    <!-- Trust logo bar -->
+    <div class="hero-trust-bar reveal" style="transition-delay:.3s">
+      <div class="trust-bar-logos" style="font-weight: 700; color: #fff;">
+        <span class="trust-logo" style="font-family:'Outfit'; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em;">⚡ Livraison 48h</span>
+        <span class="trust-sep" style="opacity: 0.4;">|</span>
+        <span class="trust-logo" style="font-family:'Outfit'; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em;">🛡️ Satisfait ou remboursé</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       POUR QUI — Targeté Audience
+  ============================================================= -->
+  <section class="audience-section pad-sm">
+    <div class="container">
+      <p class="audience-label reveal">Ce service est fait pour vous si vous êtes…</p>
+      <div class="audience-tags reveal" style="transition-delay:.1s">
+        <span class="tag">Freelance</span>
+        <span class="tag">Artisan</span>
+        <span class="tag">TPE / PME</span>
+        <span class="tag">Commerçant</span>
+        <span class="tag">Prestataire de services</span>
+        <span class="tag">Professionnel de santé</span>
+        <span class="tag">Consultant</span>
+        <span class="tag">Créateur de contenu</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       COMPARAISON — Agences classiques vs Izidigitale
+  ============================================================= -->
+  <section id="services" class="pad">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-label">Pourquoi nous</span>
+        <h2 class="section-title">Une agence différente,<br>des résultats concrets.</h2>
+      </div>
+
+      <div class="comparison-grid reveal" style="transition-delay:.15s">
+        <div class="compare-card dim">
+          <div class="compare-icon bad">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M17 7L7 17M7 7l10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h3>Ce que vous perdez<br><span style="font-size:1rem;color:var(--text-dim)">avec une agence classique</span>
+          </h3>
+          <ul class="compare-list">
+            <li>❌ Des mois d'attente (2 à 6 mois)</li>
+            <li>❌ Des budgets qui explosent sans prévenir</li>
+            <li>❌ Personne ne fait le suivi de votre projet</li>
+            <li>❌ Un site générique que tout le monde a déjà vu</li>
+            <li>❌ Abandonné après livraison, sans support</li>
+          </ul>
+        </div>
+
+        <div class="compare-card highlight">
+          <div class="compare-badge">✦ Ce que vous gagnez avec nous</div>
+          <div class="compare-icon good">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M5 12l5 5L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3>Votre site en ligne<br><span style="font-size:1rem;color:var(--text-muted)">rapidement, sans stress</span>
+          </h3>
+          <ul class="compare-list">
+            <li>✅ Site livré en <strong>48h à 78h</strong> chrono</li>
+            <li>✅ Prix fixe, annoncé avant de commencer</li>
+            <li>✅ Un <strong>expert dédié</strong> pour tout gérer à votre place</li>
+            <li>✅ Design unique, pensé pour votre activité</li>
+            <li>✅ Support inclus + clients qui appellent dès la mise en ligne</li>
+          </ul>
+          <a href="#contact-form" class="btn-primary mt-auto">Je veux mon site maintenant →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BÉNÉFICES GRID — 6 avantages clés
+  ============================================================= -->
+  <section class="benefits-section pad">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-label">Avantages</span>
+        <h2 class="section-title">Ce que vous gagnez<br>en travaillant avec nous</h2>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">🎯</div>
+          <h4>Expert dédié</h4>
+          <p>Un seul interlocuteur de la conception à la mise en ligne. Vous n'êtes jamais perdu.</p>
+        </div>
+        <div class="benefit-card reveal" style="transition-delay:.08s">
+          <div class="benefit-icon">⚡</div>
+          <h4>Livraison express</h4>
+          <p>Votre site est en ligne en moins de 7 jours. Fini les projets qui durent des mois.</p>
+        </div>
+        <div class="benefit-card reveal" style="transition-delay:.16s">
+          <div class="benefit-icon">💰</div>
+          <h4>Prix transparent</h4>
+          <p>Pas de frais cachés. Vous connaissez le prix total avant de signer, et il ne change pas.</p>
+        </div>
+        <div class="benefit-card reveal" style="transition-delay:.24s">
+          <div class="benefit-icon">📱</div>
+          <h4>100% Responsive</h4>
+          <p>Votre site est parfait sur mobile, tablette et desktop. Plus de 70% du trafic est mobile.</p>
+        </div>
+        <div class="benefit-card reveal" style="transition-delay:.32s">
+          <div class="benefit-icon">🔍</div>
+          <h4>SEO intégré</h4>
+          <p>Votre site est optimisé dès le départ pour apparaître sur Google et attirer des clients.</p>
+        </div>
+        <div class="benefit-card reveal" style="transition-delay:.40s">
+          <div class="benefit-icon">🔒</div>
+          <h4>Satisfaction garantie</h4>
+          <p>Pas convaincu ? Nous vous remboursons intégralement. Sans conditions, sans discussion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip-divider">
+    <div class="container">
+      <div class="strip-inner">
+        <span class="c-purple">Design Premium</span>
+        <span class="dot-sep">·</span>
+        <span class="c-blue">SEO Optimisé</span>
+        <span class="dot-sep">·</span>
+        <span class="c-pink">Mobile First</span>
+        <span class="dot-sep">·</span>
+        <span class="c-cyan">Livraison Rapide</span>
+        <span class="dot-sep">·</span>
+        <span class="c-purple">Support Inclus</span>
+        <span class="dot-sep">·</span>
+        <span class="c-blue">Satisfaction Garantie</span>
+        <span class="dot-sep">·</span>
+        <span class="c-pink">Sans Engagement</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       INCLUSIONS — Ce qui est compris
+  ============================================================= -->
+  <section class="inclusions-section pad">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-label">Inclus</span>
+        <h2 class="section-title">Tout ce dont votre site<br>a besoin, inclus d'office.</h2>
+      </div>
+      <div class="inclusions-grid">
+        <div class="inclusion-item reveal">
+          <div class="inc-icon">✓</div>
+          <div>
+            <h5>Design responsive</h5>
+            <p>Parfait sur tous les écrans</p>
+          </div>
+        </div>
+        <div class="inclusion-item reveal" style="transition-delay:.06s">
+          <div class="inc-icon">✓</div>
+          <div>
+            <h5>Formulaire de contact</h5>
+            <p>Recevez des leads directement</p>
+          </div>
+        </div>
+        <div class="inclusion-item reveal" style="transition-delay:.12s">
+          <div class="inc-icon">✓</div>
+          <div>
+            <h5>SEO de base</h5>
+            <p>Balises, meta, performance</p>
+          </div>
+        </div>
+        <div class="inclusion-item reveal" style="transition-delay:.18s">
+          <div class="inc-icon">✓</div>
+          <div>
+            <h5>HTTPS / SSL</h5>
+            <p>Site sécurisé par défaut</p>
+          </div>
+        </div>
+        <div class="inclusion-item reveal" style="transition-delay:.24s">
+          <div class="inc-icon">✓</div>
+          <div>
+            <h5>Mention légales</h5>
+            <p>Conformité RGPD incluse</p>
+          </div>
+        </div>
+        <div class="inclusion-item reveal" style="transition-delay:.30s">
+          <div class="inc-icon">✓</div>
+          <div>
+            <h5>Vitesse optimisée</h5>
+            <p>Score Google PageSpeed 90+</p>
+          </div>
+        </div>
+        <div class="inclusion-item reveal" style="transition-delay:.36s">
+          <div class="inc-icon">✓</div>
+          <div>
+            <h5>Google Analytics</h5>
+            <p>Suivi de vos visiteurs</p>
+          </div>
+        </div>
+        <div class="inclusion-item reveal" style="transition-delay:.42s">
+          <div class="inc-icon">✓</div>
+          <div>
+            <h5>1 mois de support</h5>
+            <p>Assistance après livraison</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TARIFS — 3 offres transparentes
+  ============================================================= -->
+  <section id="tarifs" class="pricing-section pad">
+    <div class="pricing-container">
+      
+      <div class="pricing-card">
+        <div class="card-header">
+          <span class="icon">💎</span>
+          <h3>Pack Éco-Vitrine</h3>
+          <div class="price">60 000 <span>FCFA</span></div>
+          <p class="payment-type">Paiement unique</p>
+        </div>
+        <a href="#contact" class="btn-outline">Demander ce forfait</a>
+        <ul class="features">
+          <li>✓ <strong>Hébergement & Nom de domaine (1 an OFFERTS)</strong></li>
+          <li>✓ 1 à 3 pages complètes et structurées</li>
+          <li>✓ Design moderne, Mobile-First</li>
+          <li>✓ Bouton WhatsApp direct 🟢</li>
+          <li>✓ SEO local (Google Maps)</li>
+          <li>✓ Livraison : <strong>48h</strong></li>
+        </ul>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="badge">Le plus populaire</div>
+        <div class="card-header">
+          <span class="icon">🔥</span>
+          <h3>Abonnement Pro</h3>
+          <div class="price">15 000 <span>FCFA / mois</span></div>
+          <p class="payment-type">+ 25 000 FCFA d'installation</p>
+        </div>
+        <a href="#contact-form" class="btn-primary">Choisir la sérénité</a>
+        <ul class="features">
+          <li>✓ <strong>Hébergement & Nom de domaine INCLUS</strong></li>
+          <li>✓ Site multi-pages complet (7 pages)</li>
+          <li>✓ Maintenance & Sécurité (SSL)</li>
+          <li>✓ Modifications illimitées</li>
+          <li>✓ Support prioritaire 7j/7</li>
+          <li>✓ Livraison : <strong>48h à 72h</strong></li>
+        </ul>
+      </div>
+
+      <div class="pricing-card">
+        <div class="card-header">
+          <span class="icon">🛍️</span>
+          <h3>Catalogue WhatsApp</h3>
+          <div class="price">120 000 <span>FCFA</span></div>
+          <p class="payment-type">Paiement unique</p>
+        </div>
+        <a href="#contact-form" class="btn-outline">Démarrer maintenant</a>
+        <ul class="features">
+          <li>✓ <strong>Hébergement & Nom de domaine (1 an OFFERTS)</strong></li>
+          <li>✓ Catalogue interactif (30 produits)</li>
+          <li>✓ Panier relié à WhatsApp Business</li>
+          <li>✓ Intégration Mobile Money</li>
+          <li>✓ Formation de gestion (1h)</li>
+          <li>✓ Livraison : <strong>3 à 5 jours</strong></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROCESSUS — 5 étapes claires
+  ============================================================= -->
+  <section id="processus" class="pad">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-label">Notre méthode</span>
+        <h2 class="section-title">De la première conversation<br>à la mise en ligne — simplement.</h2>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-item reveal">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h4>Échange & Découverte</h4>
+            <p>Un appel de 20 minutes pour comprendre votre activité, votre cible et vos objectifs. Sans engagement.</p>
+          </div>
+        </div>
+        <div class="step-item reveal" style="transition-delay:.08s">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h4>Proposition & Devis</h4>
+            <p>Vous recevez une proposition claire avec le périmètre exact et le prix total, sans surprise.</p>
+          </div>
+        </div>
+        <div class="step-item reveal" style="transition-delay:.16s">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h4>Design & Développement</h4>
+            <p>Notre équipe crée votre site pendant que vous vous concentrez sur votre métier.</p>
+          </div>
+        </div>
+        <div class="step-item reveal" style="transition-delay:.24s">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h4>Validation & Corrections</h4>
+            <p>Vous validez chaque étape. On intègre vos retours jusqu'à ce que tout soit parfait.</p>
+          </div>
+        </div>
+        <div class="step-item reveal" style="transition-delay:.32s">
+          <div class="step-num">05</div>
+          <div class="step-content">
+            <h4>Lancement & Suivi</h4>
+            <p>Votre site est mis en ligne. On reste disponibles pour toute question ou évolution.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TÉMOIGNAGES
+  ============================================================= -->
+  <section class="testimonials-section pad">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-label">Ils nous font confiance</span>
+        <h2 class="section-title">Ce que disent nos clients</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testi-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testi-text">"Franchement, j'hésitais à faire un site, mais le Pack Catalogue a tout changé. Mes clients m'envoient la commande sur WhatsApp en un clic. C'est propre et pro. Merci Izidigitale !"</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:#1e293b; color:#cbd5e1;">M</div>
+            <div>
+              <strong>Moussa</strong>
+              <span>Abidjan</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal" style="transition-delay:.1s">
+          <div class="stars">★★★★★</div>
+          <p class="testi-text">"Ce que j'aime avec l'Abonnement Pro, c'est que je ne m'occupe de rien. Si j'ai une image à changer, l'équipe gère ça direct. C'est rentable et sans stress."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:#1e293b; color:#cbd5e1;">F</div>
+            <div>
+              <strong>Mme Fatou</strong>
+              <span>San-Pedro</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal" style="transition-delay:.2s">
+          <div class="stars">★★★★★</div>
+          <p class="testi-text">"Il me fallait une vitrine en urgence. En 4 jours, mon site était prêt avec le Pack Éco. On me trouve facilement sur Google Maps maintenant. Je recommande !"</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:#1e293b; color:#cbd5e1;">J</div>
+            <div>
+              <strong>Jean-Luc</strong>
+              <span>Prestation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ
+  ============================================================= -->
+  <section id="faq" class="faq-section pad">
+    <div class="container faq-container">
+      <div class="section-head reveal">
+        <span class="section-label">FAQ</span>
+        <h2 class="section-title">Vos questions,<br>nos réponses.</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">
+            <span>Combien de temps pour avoir mon site ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            <p>Selon la formule choisie : 48h pour un site une page, 5 à 7 jours ouvrés pour un site vitrine, et 2 à 4
+              semaines pour un projet sur-mesure. La rapidité dépend aussi de la transmission de vos contenus (textes,
+              photos).</p>
+          </div>
+        </div>
+        <div class="faq-item reveal" style="transition-delay:.05s">
+          <button class="faq-q" aria-expanded="false">
+            <span>Est-ce que je peux modifier le site moi-même après livraison ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            <p>Oui. Selon votre préférence, on peut intégrer un CMS (système de gestion de contenu) pour que vous
+              puissiez modifier textes et images facilement, sans aucune connaissance technique.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal" style="transition-delay:.10s">
+          <button class="faq-q" aria-expanded="false">
+            <span>Que comprend exactement "SEO inclus" ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            <p>Nous configurons les balises title et meta description, la structure des headings H1/H2, les textes
+              alternatifs des images, le sitemap XML, la configuration Google Search Console et l'optimisation des temps
+              de chargement.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal" style="transition-delay:.15s">
+          <button class="faq-q" aria-expanded="false">
+            <span>Et l'hébergement, c'est inclus ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            <p>L'hébergement n'est pas inclus dans nos forfaits mais nous vous conseillons les meilleures solutions
+              (OVH, Infomaniak, Vercel, etc.) selon votre budget et vos besoins. On s'occupe de la configuration
+              complète.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal" style="transition-delay:.20s">
+          <button class="faq-q" aria-expanded="false">
+            <span>Comment fonctionne la garantie satisfaction ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            <p>Si vous n'êtes pas satisfait du résultat dans les 30 jours après livraison, nous vous remboursons
+              intégralement — sans condition ni justification nécessaire. Votre confiance est notre priorité.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal" style="transition-delay:.25s">
+          <button class="faq-q" aria-expanded="false">
+            <span>Je n'ai pas de textes ni de photos. C'est un problème ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            <p>Pas du tout. Nous pouvons vous aider à rédiger des textes optimisés SEO et sélectionner des photos
+              professionnelles libres de droits adaptées à votre secteur. C'est une option que nous proposons.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA FINAL + FORMULAIRE
+  ============================================================= -->
+  <section id="contact-form" class="contact-section pad">
+    <div class="container contact-grid">
+      <div class="contact-info reveal">
+        <span class="section-label">Contact</span>
+        <h2>Parlons de<br>votre projet.</h2>
+        <p>Réponse garantie en moins de 24h. Un appel de 20 min suffit pour tout cadrer.</p>
+        <div class="contact-details">
+          <a href="mailto:hello@izidigitale.com" class="contact-link">
+            <svg viewBox="0 0 20 20" fill="none">
+              <path d="M3 5h14a1 1 0 011 1v8a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1zm0 0l7 6 7-6"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            hello@izidigitale.com
+          </a>
+          <a href="https://wa.me/33600000000" class="contact-link">
+            <svg viewBox="0 0 20 20" fill="none">
+              <path d="M2 18l1.3-3.9A8 8 0 1010.1 18H10" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" />
+            </svg>
+            WhatsApp disponible
+          </a>
+        </div>
+        <div class="contact-trust">
+          <div class="ct-item">
+            <strong>+50</strong><span>clients satisfaits</span>
+          </div>
+          <div class="ct-item">
+            <strong>24h</strong><span>délai de réponse</span>
+          </div>
+          <div class="ct-item">
+            <strong>30j</strong><span>garantie remboursée</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-card reveal" style="transition-delay:.15s">
+        <form id="main-contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Prénom *</label>
+              <input type="text" id="fname" name="name" placeholder="Marie" required>
+            </div>
+            <div class="form-group">
+              <label for="femail">Email *</label>
+              <input type="email" id="femail" name="email" placeholder="votre@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="ftel">Téléphone (optionnel)</label>
+            <input type="tel" id="ftel" name="phone" placeholder="+33 6 00 00 00 00">
+          </div>
+          <div class="form-group">
+            <label for="ftype">Type de projet *</label>
+            <select id="ftype" name="type" required>
+              <option value="">Choisissez...</option>
+              <option value="une-page">Site une page – 499€</option>
+              <option value="vitrine">Site vitrine – 849€</option>
+              <option value="ecommerce">E-commerce / Sur mesure</option>
+              <option value="refonte">Refonte d'un site existant</option>
+              <option value="seo">Référencement SEO uniquement</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fmessage">Parlez-nous de votre projet</label>
+            <textarea id="fmessage" name="message" rows="4"
+              placeholder="Décrivez votre activité, vos objectifs, vos contraintes..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit" id="submit-btn">
+            <span>Envoyer ma demande</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+          <p class="form-note">En envoyant ce formulaire, vous acceptez d'être recontacté par Izidigitale.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================= -->
+  <footer>
+    <div class="container footer-inner">
+      <a href="/" class="logo" aria-label="Izidigitale">
+        <div class="logo-mark">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <rect width="22" height="22" rx="6" fill="url(#lg2)" />
+            <path d="M7 11h8M11 7v8" stroke="#000" stroke-width="2.2" stroke-linecap="round" />
+            <defs>
+              <linearGradient id="lg2" x1="0" y1="0" x2="22" y2="22">
+                <stop stop-color="#00d4ff" />
+                <stop offset="1" stop-color="#0066cc" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span>Izidigitale</span>
+      </a>
+
+      <p class="footer-copy">© 2026 Izidigitale. Tous droits réservés.</p>
+
+      <ul class="footer-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#tarifs">Tarifs</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/a-propos.html">À Propos</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/33600000000" class="wa-btn" target="_blank" rel="noopener"
+    aria-label="Contactez-nous sur WhatsApp">
+    <svg viewBox="0 0 448 512">
+      <path
+        d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.4-8.6-44.6-27.6-16.5-14.7-27.6-32.8-30.8-38.4-3.2-5.6-.3-8.6 2.5-11.4 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.2 3.7-5.5 5.5-9.2 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+    </svg>
+  </a>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

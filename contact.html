@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contactez Izidigitale | Votre Projet Digital Sur-Mesure</title>
+  <meta name="description" content="Prêt à propulser votre activité ? Contactez un expert Izidigitale pour un devis gratuit et personnalisé.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="/src/style.css">
+  <style>
+    .contact-page-hero {
+      padding: 10rem 0 6rem;
+      background: radial-gradient(circle at 10% 20%, rgba(120,60,255,0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 90% 80%, rgba(60,120,255,0.05) 0%, transparent 50%);
+    }
+    .form-card {
+      background: var(--bg-glass);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      backdrop-filter: blur(20px);
+      box-shadow: var(--shadow-card);
+    }
+    .form-group { margin-bottom: 1.75rem; }
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .form-control {
+      width: 100%;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 1rem;
+      transition: all 0.2s;
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--accent);
+      background: rgba(168,85,247,0.05);
+      box-shadow: 0 0 20px rgba(168,85,247,0.15);
+    }
+    .contact-info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    .info-item h4 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .info-item p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    .info-item a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .info-item a:hover { text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .form-card { padding: 2rem 1.5rem; }
+      .contact-page-hero { padding: 8rem 0 4rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION (SAME AS INDEX) -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+      <a href="/" class="logo">
+        <div class="logo-mark">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <rect width="22" height="22" rx="6" fill="url(#lg_contact)" />
+            <path d="M7 11h8M11 7v8" stroke="#000" stroke-width="2.2" stroke-linecap="round" />
+            <defs>
+              <linearGradient id="lg_contact" x1="0" y1="0" x2="22" y2="22">
+                <stop stop-color="#a855f7" />
+                <stop offset="1" stop-color="#7c3aed" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span>Izidigitale</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#tarifs">Tarifs</a></li>
+        <li><a href="/#processus">Processus</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+      </ul>
+      <a href="/contact.html" class="nav-cta">Parler à un expert &nbsp;›</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <main class="contact-page-hero">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <span class="section-label">Contact</span>
+          <h1 class="hero-title-centered" style="text-align: left; margin-top: 0;">
+            Parlons de votre <span class="gradient-text-hero">futur projet.</span>
+          </h1>
+          <p class="hero-subtitle-centered" style="text-align: left; margin-left: 0; margin-bottom: 3rem;">
+            Une question ? Une idée ? Nous sommes là pour transformer vos ambitions en réalité digitale performante.
+          </p>
+
+          <div class="contact-info-list">
+            <div class="info-item">
+              <h4>Email de contact</h4>
+              <p>Envoyez-nous vos briefs sur <a href="mailto:hello@izidigitale.com">hello@izidigitale.com</a></p>
+            </div>
+            <div class="info-item">
+              <h4>WhatsApp & Direct</h4>
+              <p>Discutons de vive voix : <a href="tel:+33600000000">+33 6 00 00 00 00</a></p>
+            </div>
+            <div class="info-item">
+              <h4>Suivez-nous</h4>
+              <div class="trust-bar-logos" style="justify-content: flex-start; margin-top: 1rem;">
+                <a href="#" class="trust-logo">LinkedIn</a>
+                <span class="trust-sep">/</span>
+                <a href="#" class="trust-logo">Instagram</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card reveal" style="transition-delay: .1s;">
+          <form id="main-contact-form">
+            <div class="form-group">
+              <label for="name">Nom complet</label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="Jean Dupont" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Adresse email</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="jean@entreprise.com" required>
+            </div>
+            <div class="form-group">
+              <label for="project">Type de projet</label>
+              <select id="project" name="project" class="form-control">
+                <option value="vitrine">Site Vitrine Stratégique</option>
+                <option value="ecommerce">E-commerce Haute Performance</option>
+                <option value="seo">Optimisation & Croissance SEO</option>
+                <option value="audit">Audit & Refonte</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Votre message</label>
+              <textarea id="message" name="message" class="form-control" rows="5" placeholder="Décrivez brièvement vos objectifs..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary" id="submit-btn" style="width: 100%; justify-content: center; padding: 1.1rem;">
+              <span>Envoyer ma demande &nbsp;→</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-copy">&copy; 2026 Izidigitale. Expertise Digitale Premium.</div>
+      <ul class="footer-links">
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="#">Mentions Légales</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/33600000000" class="wa-btn" target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.4-8.6-44.6-27.6-16.5-14.7-27.6-32.8-30.8-38.4-3.2-5.6-.3-8.6 2.5-11.4 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.2 3.7-5.5 5.5-9.2 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+  </a>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
