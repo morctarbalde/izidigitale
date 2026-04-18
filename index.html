@@ -57,74 +57,23 @@
   </nav>
 
   <!-- ============================================================
-       HERO — Synexis Inspired: Centered, Star Visual, Rings
+       HERO
   ============================================================= -->
   <section class="hero hero-centered">
-
-    <!-- Animated concentric rings -->
-    <div class="hero-rings" aria-hidden="true">
-      <div class="ring ring-1"></div>
-      <div class="ring ring-2"></div>
-      <div class="ring ring-3"></div>
-      <div class="ring ring-4"></div>
-    </div>
-
-    <!-- Glowing star / diamond shape -->
-    <div class="hero-star-wrap" aria-hidden="true">
-      <svg class="hero-star" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="growthGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#b06cff" />
-            <stop offset="100%" stop-color="#c084fc" />
-          </linearGradient>
-          <filter id="chartGlow">
-            <feGaussianBlur stdDeviation="8" result="blur"/>
-            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
-        </defs>
-        <!-- Background tech grid for the "chart" -->
-        <rect x="50" y="50" width="200" height="200" rx="12" fill="rgba(120,60,255,0.03)" stroke="rgba(120,60,255,0.1)" stroke-width="1" />
-        <path d="M70 230 L230 230 M70 50 L70 230" stroke="rgba(120,60,255,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
-        
-        <!-- The rising line -->
-        <path
-          d="M70 210 Q90 200 110 180 T150 140 T190 110 T230 70"
-          stroke="url(#growthGrad)"
-          stroke-width="5"
-          stroke-linecap="round"
-          filter="url(#chartGlow)"
-          style="animation: draw-line 3s ease-out forwards;"
-        />
-        <!-- Floating data/star points -->
-        <circle cx="110" cy="180" r="4" fill="#fff" filter="url(#chartGlow)" />
-        <circle cx="150" cy="140" r="4" fill="#fff" filter="url(#chartGlow)" />
-        <circle cx="230" cy="70" r="6" fill="#fff" filter="url(#chartGlow)" />
-        
-        <!-- Pulsing 4-pointed accent at end of growth -->
-        <path
-          d="M230 40 C230 40 235 65 260 70 C235 75 230 100 230 100 C230 100 225 75 200 70 C225 65 230 40 230 40Z"
-          fill="#fff"
-          opacity="0.6"
-          filter="url(#chartGlow)"
-          style="animation: star-float 4s ease-in-out infinite;"
-        />
-      </svg>
-      <!-- Horizontal cyan streaks -->
-      <div class="hero-streak hero-streak-left"></div>
-      <div class="hero-streak hero-streak-right"></div>
-    </div>
+    <div class="hero-bg-anim" aria-hidden="true"></div>
+    <canvas class="hero-particles" id="heroParticles" aria-hidden="true"></canvas>
 
     <!-- Content -->
     <div class="hero-center-content reveal">
-      <div class="hero-overline">Livraison 48h · Satisfait ou remboursé</div>
+      <div class="hero-overline">⚡ Livraison 48h &nbsp;·&nbsp; 🛡️ Satisfait ou remboursé</div>
 
       <h1 class="hero-title-centered">
         Propulsez votre business<br>
-        <span class="gradient-text-hero">dans l’ère digitale.</span>
+        <span class="gradient-text-hero">dans l'ère digitale.</span>
       </h1>
 
       <p class="hero-subtitle-centered">
-        Nous créons des solutions web sur mesure et performantes pour transformer vos visiteurs en clients.
+        Nous créons des solutions web sur mesure et performantes pour transformer vos visiteurs en clients — rapidement, sans stress.
       </p>
 
       <div class="hero-cta-centered">
@@ -132,20 +81,69 @@
           Démarrer mon projet
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="#tarifs" class="btn-hero-ghost">Voir les offres</a>
+        <a href="#tarifs" class="btn-hero-ghost">
+          Voir les offres
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 3l5 5-5 5M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
       </div>
-    </div>
 
-    <!-- Trust logo bar -->
-    <div class="hero-trust-bar reveal" style="transition-delay:.3s">
-      <div class="trust-bar-logos" style="font-weight: 700; color: #fff;">
-        <span class="trust-logo" style="font-family:'Outfit'; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em;">⚡ Livraison 48h</span>
-        <span class="trust-sep" style="opacity: 0.4;">|</span>
-        <span class="trust-logo" style="font-family:'Outfit'; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em;">🛡️ Satisfait ou remboursé</span>
+      <!-- Hero stats -->
+      <div class="hero-stats reveal" style="transition-delay:.5s">
+        <div class="hstat">
+          <strong data-counter data-target="54" data-suffix="+">54+</strong>
+          <span>clients satisfaits</span>
+        </div>
+        <div class="hstat-sep"></div>
+        <div class="hstat">
+          <strong data-counter data-target="48" data-suffix="h">48h</strong>
+          <span>livraison express</span>
+        </div>
+        <div class="hstat-sep"></div>
+        <div class="hstat">
+          <strong>30j</strong>
+          <span>garantie remboursée</span>
+        </div>
       </div>
     </div>
 
   </section>
+
+  <!-- ============================================================
+       STRIP DEFILEMENT - BANDEAU
+  ============================================================= -->
+  <div class="strip-divider">
+    <div class="container" style="max-width: 100%;">
+      <div class="strip-inner">
+        <span class="c-purple">Design Premium</span>
+        <span class="dot-sep">·</span>
+        <span class="c-blue">SEO Optimisé</span>
+        <span class="dot-sep">·</span>
+        <span class="c-pink">Mobile First</span>
+        <span class="dot-sep">·</span>
+        <span class="c-cyan">Livraison Rapide</span>
+        <span class="dot-sep">·</span>
+        <span class="c-purple">Support Inclus</span>
+        <span class="dot-sep">·</span>
+        <span class="c-blue">Satisfaction Garantie</span>
+        <span class="dot-sep">·</span>
+        <span class="c-pink">Sans Engagement</span>
+        <span class="dot-sep">·</span>
+        <span class="c-purple">Design Premium</span>
+        <span class="dot-sep">·</span>
+        <span class="c-blue">SEO Optimisé</span>
+        <span class="dot-sep">·</span>
+        <span class="c-pink">Mobile First</span>
+        <span class="dot-sep">·</span>
+        <span class="c-cyan">Livraison Rapide</span>
+        <span class="dot-sep">·</span>
+        <span class="c-purple">Support Inclus</span>
+        <span class="dot-sep">·</span>
+        <span class="c-blue">Satisfaction Garantie</span>
+        <span class="dot-sep">·</span>
+        <span class="c-pink">Sans Engagement</span>
+      </div>
+    </div>
+  </div>
 
   <!-- ============================================================
        POUR QUI — Targeté Audience
@@ -262,26 +260,6 @@
     </div>
   </section>
 
-  <div class="strip-divider">
-    <div class="container">
-      <div class="strip-inner">
-        <span class="c-purple">Design Premium</span>
-        <span class="dot-sep">·</span>
-        <span class="c-blue">SEO Optimisé</span>
-        <span class="dot-sep">·</span>
-        <span class="c-pink">Mobile First</span>
-        <span class="dot-sep">·</span>
-        <span class="c-cyan">Livraison Rapide</span>
-        <span class="dot-sep">·</span>
-        <span class="c-purple">Support Inclus</span>
-        <span class="dot-sep">·</span>
-        <span class="c-blue">Satisfaction Garantie</span>
-        <span class="dot-sep">·</span>
-        <span class="c-pink">Sans Engagement</span>
-      </div>
-    </div>
-  </div>
-
   <!-- ============================================================
        INCLUSIONS — Ce qui est compris
   ============================================================= -->
@@ -356,16 +334,22 @@
        TARIFS — 3 offres transparentes
   ============================================================= -->
   <section id="tarifs" class="pricing-section pad">
+    <div class="container" style="margin-bottom: 3rem;">
+      <div class="section-head reveal" style="text-align:center;">
+        <span class="section-label">Tarifs</span>
+        <h2 class="section-title">Des offres claires,<br>pour chaque projet.</h2>
+        <p class="section-sub" style="max-width:520px; margin:0 auto;">Prix fixe annoncé dès le départ — pas de frais cachés, pas de mauvaises surprises.</p>
+      </div>
+    </div>
     <div class="pricing-container">
-      
-      <div class="pricing-card">
+      <div class="pricing-card reveal">
         <div class="card-header">
-          <span class="icon">💎</span>
+          <span class="icon">💼</span>
           <h3>Pack Éco-Vitrine</h3>
           <div class="price">60 000 <span>FCFA</span></div>
-          <p class="payment-type">Paiement unique</p>
+          <p class="payment-type">Paiement unique — livraison en 48h</p>
         </div>
-        <a href="#contact" class="btn-outline">Demander ce forfait</a>
+        <a href="#contact-form" class="btn-outline">Demander ce forfait</a>
         <ul class="features">
           <li>✓ <strong>Hébergement & Nom de domaine (1 an OFFERTS)</strong></li>
           <li>✓ 1 à 3 pages complètes et structurées</li>
@@ -376,7 +360,7 @@
         </ul>
       </div>
 
-      <div class="pricing-card featured">
+      <div class="pricing-card featured reveal" style="transition-delay:.1s">
         <div class="badge">Le plus populaire</div>
         <div class="card-header">
           <span class="icon">🔥</span>
@@ -395,7 +379,7 @@
         </ul>
       </div>
 
-      <div class="pricing-card">
+      <div class="pricing-card reveal" style="transition-delay:.2s">
         <div class="card-header">
           <span class="icon">🛍️</span>
           <h3>Catalogue WhatsApp</h3>
@@ -474,41 +458,127 @@
       <div class="section-head reveal">
         <span class="section-label">Ils nous font confiance</span>
         <h2 class="section-title">Ce que disent nos clients</h2>
+        <p class="section-sub">Plus de 50 entrepreneurs ont déjà fait confiance à Izidigitale pour créer leur présence en ligne.</p>
       </div>
 
       <div class="testimonials-grid">
         <div class="testi-card reveal">
           <div class="stars">★★★★★</div>
-          <p class="testi-text">"Franchement, j'hésitais à faire un site, mais le Pack Catalogue a tout changé. Mes clients m'envoient la commande sur WhatsApp en un clic. C'est propre et pro. Merci Izidigitale !"</p>
+          <p class="testi-text">«Franchement, j’hésitais à faire un site, mais le Pack Catalogue a tout changé. Mes clients m’envoient la commande sur WhatsApp en un clic. C’est propre et pro. Merci Izidigitale !»</p>
           <div class="testi-author">
-            <div class="testi-avatar" style="background:#1e293b; color:#cbd5e1;">M</div>
+            <div class="testi-avatar">M</div>
             <div>
               <strong>Moussa</strong>
-              <span>Abidjan</span>
+              <span>Abidjan — Commerce</span>
             </div>
           </div>
         </div>
         <div class="testi-card reveal" style="transition-delay:.1s">
           <div class="stars">★★★★★</div>
-          <p class="testi-text">"Ce que j'aime avec l'Abonnement Pro, c'est que je ne m'occupe de rien. Si j'ai une image à changer, l'équipe gère ça direct. C'est rentable et sans stress."</p>
+          <p class="testi-text">«Ce que j’aime avec l’Abonnement Pro, c’est que je ne m’occupe de rien. Si j’ai une image à changer, l’équipe gère ça direct. C’est rentable et sans stress.»</p>
           <div class="testi-author">
-            <div class="testi-avatar" style="background:#1e293b; color:#cbd5e1;">F</div>
+            <div class="testi-avatar">F</div>
             <div>
               <strong>Mme Fatou</strong>
-              <span>San-Pedro</span>
+              <span>San-Pedro — Services</span>
             </div>
           </div>
         </div>
         <div class="testi-card reveal" style="transition-delay:.2s">
           <div class="stars">★★★★★</div>
-          <p class="testi-text">"Il me fallait une vitrine en urgence. En 4 jours, mon site était prêt avec le Pack Éco. On me trouve facilement sur Google Maps maintenant. Je recommande !"</p>
+          <p class="testi-text">«Il me fallait une vitrine en urgence. En 4 jours, mon site était prêt avec le Pack Éco. On me trouve facilement sur Google Maps maintenant. Je recommande !»</p>
           <div class="testi-author">
-            <div class="testi-avatar" style="background:#1e293b; color:#cbd5e1;">J</div>
+            <div class="testi-avatar">J</div>
             <div>
               <strong>Jean-Luc</strong>
-              <span>Prestation</span>
+              <span>Abidjan — Prestation</span>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PORTFOLIO — Réalisations récentes
+  ============================================================= -->
+  <section class="portfolio-section pad" id="realisations">
+    <div class="container">
+      <div class="section-head reveal" style="text-align:center;">
+        <span class="section-label">Réalisations</span>
+        <h2 class="section-title">Quelques projets<br>dont nous sommes fiers.</h2>
+        <p class="section-sub" style="margin: 0 auto;">Chaque site est unique, pensé pour convertir et représenter l'identité de nos clients.</p>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-card reveal">
+          <div class="portfolio-img" style="background: linear-gradient(135deg, #1a0533 0%, #4c1d95 50%, #7c3aed 100%)">
+            <span class="portfolio-tag">Site vitrine</span>
+            <div class="portfolio-overlay">
+              <span>Voir le projet →</span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h4>Cabinet Médical Dr. Koné</h4>
+            <p>Site vitrine professionnel avec prise de rendez-vous en ligne, optimisé SEO local.</p>
+            <div class="portfolio-tech">
+              <span>Design</span><span>SEO Local</span><span>48h</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal" style="transition-delay:.1s">
+          <div class="portfolio-img" style="background: linear-gradient(135deg, #0c2a1a 0%, #064e3b 50%, #10b981 100%)">
+            <span class="portfolio-tag">Catalogue WhatsApp</span>
+            <div class="portfolio-overlay">
+              <span>Voir le projet →</span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h4>Boutique Mode Aminata</h4>
+            <p>Catalogue produits relié directement à WhatsApp Business avec intégration Mobile Money.</p>
+            <div class="portfolio-tech">
+              <span>E-commerce</span><span>WhatsApp</span><span>Mobile</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal" style="transition-delay:.2s">
+          <div class="portfolio-img" style="background: linear-gradient(135deg, #1e1a05 0%, #78350f 50%, #f59e0b 100%)">
+            <span class="portfolio-tag">Site vitrine</span>
+            <div class="portfolio-overlay">
+              <span>Voir le projet →</span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <h4>Restaurant Le Baobab</h4>
+            <p>Site élégant avec menu interactif, galerie photos et bouton de réservation WhatsApp.</p>
+            <div class="portfolio-tech">
+              <span>Restaurant</span><span>Galerie</span><span>SEO</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA URGENCE INTERMÉDIAIRE
+  ============================================================= -->
+  <section class="mid-cta-section">
+    <div class="container">
+      <div class="mid-cta-inner reveal">
+        <div class="mid-cta-left">
+          <div class="mid-cta-badge">🔥 Places limitées ce mois-ci</div>
+          <h2>Votre site peut être en ligne<br><span class="gradient-text-hero">dans 48h.</span></h2>
+          <p>Discutons de votre projet maintenant — c'est gratuit et sans engagement.</p>
+        </div>
+        <div class="mid-cta-right">
+          <a href="#contact-form" class="btn-hero-primary">
+            Je veux mon site maintenant
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <p class="mid-cta-note">✓ Réponse en moins de 24h &nbsp;·&nbsp; ✓ Sans engagement</p>
         </div>
       </div>
     </div>
@@ -649,12 +719,11 @@
           <div class="form-group">
             <label for="ftype">Type de projet *</label>
             <select id="ftype" name="type" required>
-              <option value="">Choisissez...</option>
-              <option value="une-page">Site une page – 499€</option>
-              <option value="vitrine">Site vitrine – 849€</option>
-              <option value="ecommerce">E-commerce / Sur mesure</option>
-              <option value="refonte">Refonte d'un site existant</option>
-              <option value="seo">Référencement SEO uniquement</option>
+              <option value="">Choisissez votre projet...</option>
+              <option value="eco-vitrine">Pack Éco-Vitrine — 60 000 FCFA (48h)</option>
+              <option value="abonnement-pro">Abonnement Pro — 15 000 FCFA/mois</option>
+              <option value="catalogue-wa">Catalogue WhatsApp — 120 000 FCFA</option>
+              <option value="sur-mesure">Projet sur mesure / Autre</option>
             </select>
           </div>
           <div class="form-group">
@@ -679,31 +748,58 @@
        FOOTER
   ============================================================= -->
   <footer>
-    <div class="container footer-inner">
-      <a href="/" class="logo" aria-label="Izidigitale">
-        <div class="logo-mark">
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-            <rect width="22" height="22" rx="6" fill="url(#lg2)" />
-            <path d="M7 11h8M11 7v8" stroke="#000" stroke-width="2.2" stroke-linecap="round" />
-            <defs>
-              <linearGradient id="lg2" x1="0" y1="0" x2="22" y2="22">
-                <stop stop-color="#00d4ff" />
-                <stop offset="1" stop-color="#0066cc" />
-              </linearGradient>
-            </defs>
-          </svg>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="logo" aria-label="Izidigitale">
+            <div class="logo-mark">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <rect width="22" height="22" rx="6" fill="url(#lg2)" />
+                <path d="M7 11h8M11 7v8" stroke="#000" stroke-width="2.2" stroke-linecap="round" />
+                <defs>
+                  <linearGradient id="lg2" x1="0" y1="0" x2="22" y2="22">
+                    <stop stop-color="#a855f7" />
+                    <stop offset="1" stop-color="#7c3aed" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <span>Izidigitale</span>
+          </a>
+          <p class="footer-brand-desc">Votre agence web premium. Sites professionnels livrés en 48h.</p>
+          <div class="footer-socials">
+            <a href="https://wa.me/33600000000" class="social-link" aria-label="WhatsApp" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="mailto:hello@izidigitale.com" class="social-link" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
         </div>
-        <span>Izidigitale</span>
-      </a>
-
-      <p class="footer-copy">© 2026 Izidigitale. Tous droits réservés.</p>
-
-      <ul class="footer-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#tarifs">Tarifs</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-        <li><a href="/a-propos.html">À Propos</a></li>
-      </ul>
+        <div class="footer-nav-group">
+          <h5>Navigation</h5>
+          <ul>
+            <li><a href="#services">Pourquoi nous</a></li>
+            <li><a href="#tarifs">Tarifs</a></li>
+            <li><a href="#processus">Notre méthode</a></li>
+            <li><a href="#realisations">Réalisations</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-group">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="mailto:hello@izidigitale.com">hello@izidigitale.com</a></li>
+            <li><a href="https://wa.me/33600000000" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="/contact.html">Formulaire de contact</a></li>
+            <li><a href="/a-propos.html">À Propos</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Izidigitale. Tous droits réservés.</p>
+        <p class="footer-copy">Agence web premium — Sites livrés en 48h 🚀</p>
+      </div>
     </div>
   </footer>
 
